@@ -1,0 +1,105 @@
+// .pageNav__tabItem {
+//     display: inline-block;
+//     white-space: nowrap;
+//     height: 40px;
+//     padding: 0 10px;
+//     // width: 200px;
+//     font-size: 1.6rem;
+//     box-sizing: content-box;
+
+//     background-color: transparent;
+//     margin-right: 20px;
+//     border: none;
+//     border-radius: 6px;
+//     color: $grey;
+//     border: 2px solid transparent;
+//     &--active {
+//         background-color: #FFFFFF;
+//         border: 2px solid #41F6D7;
+//         border-radius: 6px;
+//     }
+// }
+// .tabs__tab-panel {
+//     display: none;
+//     &.active {
+//       display: block;
+//     }
+// }
+.tabs {
+// display: flex;
+// overflow: scroll;
+// overflow-y: hidden;
+
+&__tab {
+    display: inline-block;
+    white-space: nowrap;
+    height: 40px;
+    padding: 0 10px;
+    font-size: 1.6rem;
+    box-sizing: content-box;
+
+    background-color: transparent;
+    margin-right: 20px;
+    border: none;
+    border-radius: 6px;
+    color: #7E7E82;
+        border: 2px solid transparent;
+    
+    &--current {
+    background-color: #FFFFFF;
+    border: 2px solid #41F6D7;
+    border-radius: 6px;
+    }
+}
+
+.tabs__content {
+display: none;
+font-size: 1.6rem;
+font-family: $font;
+// background-color: rgba(0, 0, 0, 0.05);
+}
+.tabs__content--current {
+display: block;
+}
+// .pageNav__tabItem--active {
+//     background-color: #FFFFFF;
+//     border: 2px solid #41F6D7;
+//     border-radius: 6px;
+// }
+
+.btn-section {
+    display: flex;
+    overflow: scroll;
+    overflow-y: hidden;
+    &__btn {
+        display: inline-block;
+        white-space: nowrap;
+        height: 40px;
+        padding: 0 10px;
+        // width: 200px;
+        font-size: 1.6rem;
+        box-sizing: content-box;
+
+        background-color: transparent;
+        margin-right: 20px;
+        border: none;
+        border-radius: 6px;
+        color: $grey;
+        border: 2px solid transparent;
+    }
+    &__btn-focus {
+        background-color: #fff;
+        border: 2px solid $highlight;
+        border-radius: 6px;
+        // flex: 0 0 250px;
+        // width: 250px;
+    }
+}
+
+@media screen and (min-width:1439px) {
+    .btn-section {
+        overflow: visible;
+        display: flex;
+        flex-wrap: wrap;
+    }
+}}

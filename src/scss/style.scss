@@ -1,0 +1,115 @@
+$greyBc: #F8F8F8;
+$highlight: #41F6D7;
+$black: #1B1C21;
+$grey: #7E7E82;
+$btnBorder: #EAEAEA;
+$pink: #FF3E79;
+$white:#FFFFFF;
+$font: 'TT Lakes';
+$boldFont: 'TT Lakes Bold';
+
+@import './header';
+@import './serviceBtns';
+@import './readNextBtn';
+@import './title';
+@import './brandBtns.scss';
+@import './techBtns';
+@import './priceTable.scss';
+@import './footer.scss';
+@import './sidebar';
+@import './burgerMenu';
+@import './heading';
+@import './callback.scss';
+@import './feedback.scss';
+
+@font-face {
+  font-family: 'TT Lakes';
+  src: url('../fonts/TTLakes-Regular.ttf') format('truetype');
+  font-weight: normal;
+  font-style: normal;
+}
+@font-face {
+  font-family: 'TT Lakes Bold';
+  src: url('../fonts/TTLakes-Bold.ttf') format('truetype');
+  font-weight: normal;
+  font-style: normal;
+}
+html {
+  background-color: $white;
+  font-size: 10px;
+  font-family: $font;
+}
+.wrapper {
+  max-width: 1440px;
+  margin: 0 auto;
+  background-color: $greyBc;
+
+  @media screen and (min-width: 1440px){
+    .wrapper {
+      border-left: 1px solid $btnBorder;
+      border-right: 1px solid $btnBorder;
+    }
+  }
+}
+.content-wrapper {
+  padding: 0 15px;
+}
+.main-page {
+  opacity: 1;
+}
+button {
+  outline: none;
+  border: none;
+  cursor: pointer;
+}
+.text {
+  font-size: 1.4rem;
+  max-height: 110px;
+  overflow: hidden;
+}
+.show {
+  max-height: 500px !important;
+}
+.cps-photo {
+  margin-bottom: 15px;
+}
+.info-text {
+  font-size: 1.4rem;
+  max-width: 421px;
+  width: auto;
+  margin: 15px;
+}
+.proposal-btn {
+  display: flex;
+  align-items: center;
+  padding-left: 15px;
+  font-size: 1.6rem;
+  color: $black;
+  background-color: transparent;
+  justify-content: flex-start;
+  &__icon {
+      background-image: url('../img/ic/Line.svg');
+      height: 10px;
+      width: 6px;
+      margin-left: 7px;
+  }
+}
+.proposal-btn:hover {
+  color: $grey;
+}
+.overlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100vw;
+  height: 100vh;
+  background-color: rgba(255, 255, 255, 0.95);
+}
+// .tab-pane.active{
+//   display: flex;
+// }
+// .tab-pane{
+//   display: none;
+//   max-height: 110px;
+//   // padding: 30px;
+// }

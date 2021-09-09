@@ -1,0 +1,79 @@
+.heading {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    justify-content: space-between;
+    &__title {
+        align-self: flex-start;
+        h1 {
+        font-size: 2.8rem;
+        font-weight: bold;
+        }
+        h1::before {
+        content: " ";
+        margin-left: -15px;
+        margin-right: 15px;
+        display: inline-block;
+        height: 40px;
+        width: 4px;
+        background-color: $highlight;
+        position: relative;
+        top: 10px;
+        }
+    }
+}
+.heading__leave-request {
+        display: flex;
+        align-items: center;
+        // justify-content: center;
+        margin-right: 15px;
+        margin-left: 40%;
+        button {
+            width: 40px;
+            height: 40px;
+            border-radius: 20px;
+            background-image: url("../img/ic/repair.svg");
+            margin-left: 10px;
+        }
+        a {
+            text-decoration: none;
+            font-size: 1.6rem;
+            color: $black;
+        }
+    }
+.heading__check-status {
+        display: flex;
+        align-items: center;
+        // justify-content: center;
+        button {
+            margin-left: 10px;
+            width: 40px;
+            height: 40px;
+            border-radius: 20px;
+            background-image: url("../img/ic/checkstatus.svg");
+        }
+        a {
+            text-decoration: none;
+            font-size: 1.6rem;
+            color: $black;
+    }
+}
+@media screen and (max-width:1120px){
+    .heading__leave-request {
+        display: none !important;
+    }
+    .heading__check-status {
+        display: none !important;
+    }
+}
+@media screen and (min-width:1120px) {
+    .header__container {
+        display: none;
+    }
+    .heading {
+        padding-bottom: 20px;
+    }
+    .heading__leave-request {
+        margin-left: 35%;
+    }
+}

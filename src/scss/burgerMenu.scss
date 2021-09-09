@@ -1,0 +1,198 @@
+a {
+    cursor: pointer;
+}
+.burger-menu {
+    box-shadow: 16px 0px 52px rgba(14, 24, 80, 0.2), -2px 0px 4px rgba(69, 79, 126, 0.02);
+    display: flex;
+    flex-direction: column;
+    width: 320px;
+    max-width: 320px;
+    // height: fit-content;
+    height: 100vh;
+    max-height: 100vh;
+    // overflow-y: scroll;
+    transition: left 500ms;
+    // position: fixed;
+    // top: 0;
+    // left: -500px;
+    z-index: 200;
+    @media screen and (max-width: 426px) {
+        width: 320px;
+    }
+    @media screen and (min-width: 426px) {
+        width: 320px;
+    }
+
+    @media screen and (min-width: 1120px) {
+        left: auto;
+
+        width: 306px;
+        padding-left: 4px;
+
+        box-shadow: none;
+        // box-shadow: 
+        //     inset 1px 0 0 0 $shadowColor,
+        //     inset -1px 0 0 0 $shadowColor;
+    }
+
+    @media screen and (max-height: 850px) {
+        // overflow: scroll;
+    }
+
+    &__wrapper {
+        padding: 15px;
+    }
+    &__head {
+        display: flex;
+        align-items: center;
+    }
+    &__close {
+        margin-right: 16px;
+        background-image: url('../img/logos/cross.svg');
+        width: 40px;
+        height: 40px;
+        border-radius: 20px;
+        background-color: transparent;
+
+        @media screen and (min-width: 1120px) {
+            display: none;
+        }
+    }
+    &__search {
+        background-image: url('../img/logos/search.svg');
+        width: 40px;
+        height: 40px;
+        border-radius: 20px;
+        background-color: transparent;
+        margin-left: 30%;
+    }
+    &__search:hover {
+        transform: scale(1.1);
+    }
+}
+.dropdown-navigation {
+    margin-left: -15px;
+    list-style-type: none;
+    padding: 0;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    &__item {
+        text-decoration: none;
+        padding-bottom: 20px;
+    }
+    &__item:first-child {
+        margin-top: 30px;
+    }
+    &__link {
+        text-decoration: none;
+        color: $black;
+        font-size: 1.6rem;
+        border: 4px solid transparent;
+        padding-left: 17px;
+        margin-left: 0;
+    }
+    &__link:hover {
+        opacity: 70%;
+    }
+    &__link-focus {
+        color: $grey;
+        border-left-color: $highlight;
+    }
+}
+.dropdown-contacts {
+    display: flex;
+    flex-direction: column;
+    margin-top: 30%;
+    &__btn {
+        width: 40px;
+        height: 40px;
+        background-color: transparent;
+    }
+    &__btn:hover {
+        transform: scale(1.1);
+    }
+    .tel-btn {
+        background-image: url('../img/ic/call.svg');
+        margin-right: 10px;
+    }
+    .chat-btn {
+        background-image: url('../img/ic/chat.svg');
+        margin-right: 10px;
+    }
+    .profile-btn {
+        background-image: url('../img/ic/profile.svg');
+        margin-right: 10px;
+    }
+    &__email {
+        margin-top: 15px;
+        text-decoration: none;
+        color: $black;
+        font-size: 1.6rem;
+    }
+    &__t-number {
+        text-decoration: none;
+        color: $black;
+        font-size: 2.4rem;
+        font-family: 'TT Lakes Bold';
+    }
+}
+.languages-list {
+    list-style-type: none;
+    padding: 0;
+    display: flex;
+    align-items: center;
+    &__link {
+        text-decoration: none;
+        color: $black;
+        font-size: 1.6rem;
+        padding-right: 10px;
+        &--active {
+            font-family: $boldFont;
+        }
+    }
+    &__link:hover {
+        opacity: 50%;
+    }
+}
+.burger-menu__close:hover {
+    transform: scale(1.1);
+}
+@media screen and (min-width: 320px) {
+    .burger-menu {
+        position: fixed;
+        top: 0;
+        height: 1200px;
+        left: -320px;
+        z-index: 2000;
+        background-color: $white;
+        &__search {
+            margin-left: 30px;
+        }
+    }
+    .main-page {
+        // opacity: 0.1;
+        position: relative;
+    }
+    .show-burger {
+        left: 0;
+    }
+}
+
+@media screen and (min-width: 1120px){
+    .main-page {
+        margin-left: 320px;
+    }
+    .burger-menu {
+        position: fixed;
+        left: auto;
+        top: 0;
+        height: 100vh;
+        transition: left 500ms;
+        // overflow-y: scroll;
+        // border-left: 1px solid $grey;
+        &__search {
+            margin-left: 35%;
+        }
+    }
+}

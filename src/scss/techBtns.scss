@@ -1,0 +1,55 @@
+.technique-types {
+    display: flex;
+    align-items: column;
+    flex-wrap: wrap;
+    padding: 15px 15px;
+    background-color: $greyBc;
+    max-height: 320px;
+    overflow: hidden;
+    max-width: 100%;
+    &__btn{
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+        padding: 15px;
+        width: 240px;
+        height: 160px;
+        border: 1px solid $btnBorder;
+        border-radius: 6px;
+        background-color: $white;
+        margin: 5px 30px 5px 0;
+        p {
+            font-size: 1.6rem;
+            color: $black;
+        }
+        .round-icon{
+            width: 40px;
+            height: 40px;
+            border-radius: 20px;
+            background-image: url('../img/ic/go.svg');
+            margin-left: 167px;
+        }
+    }
+}
+.show-more {
+    padding-left: 15px;
+}
+@media  screen and (max-width:768px) {
+    .technique-types {
+        display: none;
+    }
+    .show-more {
+        display: none;
+    }
+    .technique-types__btn {
+        margin: 0 auto;
+    }
+    .mySwiper {
+        overflow: hidden;
+    }
+}
+@media screen and (min-width: 768px){
+    .mySwiper {
+        display: none;
+    }
+}

@@ -1,0 +1,78 @@
+.price-table-wrapper {
+    max-width: 1440px;
+    padding-right: 15px;
+}
+table {
+    border-spacing: 0.2rem;
+}
+.price-table {
+    margin-left: 15px;
+    font-size: 1.4rem;
+    padding: 15px;
+    border-collapse: collapse;
+    max-width: 1056px;
+    width: 100%;
+    text-indent: initial;
+    tr {
+        padding:  15px;
+    }
+    tr:nth-child(1) {
+        background-color: $greyBc;
+        color: $grey;
+    }
+    tr:nth-child(n+2){
+        background-color: $white;
+    }
+    td {
+        padding: 15px;
+    }
+    tr:nth-child(n+3) {
+        border-top: 1px solid $btnBorder;
+    }
+}
+.services-and-prices__card {
+    background-color: $white;
+    width: 240px;
+    height: 175px;
+    font-size: 1.4rem;
+    padding: 15px;
+    margin: 15px;
+    border: 1px solid $btnBorder;
+    border-radius: 6px;
+    tr:nth-child(2n+1){
+        color: $grey;
+    }
+}
+.order-btn {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: $pink;
+    text-transform: uppercase;
+    border-radius: 16px;
+    width: 119px;
+    height: 32px;
+    color: $white;
+    &__icon {
+        background-image: url('../img/ic/goside.svg');
+        height: 20px;
+        width: 20px;
+        align-self: center;
+    }
+}
+.order-btn:hover {
+    transform: scale(1.1);
+}
+@media  screen and (max-width:768px) {
+    .price-table {
+        display: none;
+    }
+    .show-more {
+        display: none;
+    }
+}
+@media screen and (min-width: 768px){
+    .mySwiper {
+        display: none;
+    }
+}

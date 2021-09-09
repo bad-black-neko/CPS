@@ -1,0 +1,12 @@
+.title {
+    padding: 0 15px;
+    display: flex;
+    align-items: center;
+    background: linear-gradient(90deg, rgb(248, 248, 248) 20%, rgb(255, 255, 255) 41%);;
+    height: 55px;
+    h2 {
+        text-transform: uppercase;
+        font-size: 1.6rem;
+        color: $grey;
+    }
+}

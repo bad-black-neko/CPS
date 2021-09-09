@@ -1,0 +1,89 @@
+
+.header__container {
+    padding: 15px;
+    background-color: $white;
+  }
+  .nav {
+    display: flex;
+    align-items: center;
+    align-content: center;
+    justify-content: space-between;
+    margin: 0 auto;
+    &__social-btns {
+        @media screen and (min-width: 540px) {
+            display: flex;
+            justify-content: flex-end;
+        }
+    }
+    &__burger-logo-wrapper {
+      display: flex;
+      align-items: center;
+      @media screen and (min-width: 540px) {
+        display: flex;
+        justify-content: flex-start;
+        align-items: center;
+        .nav__logo {
+          margin-left: 30px;
+        }
+      }
+    }
+    &__logo {
+      margin-left: 15px;
+    }
+    
+    &__btn {
+        width: 40px;
+        height: 40px;
+        border-radius: 20px;
+        padding: 15px 0;
+    }
+    .burger {
+      background-image: url('../img/ic/burger.svg');
+    }
+    .tel {
+      background-image: url('../img/ic/call.svg');
+      margin-right: 15px;
+    }
+    .chat {
+      background-image: url('../img/ic/chat.svg');
+      margin-right: 15px;
+    }
+    .profile {
+      background-image: url('../img/ic/profile.svg');
+      margin-right: 15px;
+    }
+    .repair {
+      background-image: url('../img/ic/repair.svg');
+      margin-right: 15px;
+    }
+    .status {
+      background-image: url('../img/ic/checkstatus.svg');
+    }
+    // &__break {
+    //   display: none;
+    //   width: 152px;
+    //   height: 1px;
+    //   content: " ";
+    // }
+  }
+.nav__btn:hover {
+  transform: scale(1.1);
+}
+.nav__logo::before {
+  content: '';
+  display: inline-block;
+  width: 2px;
+  height: 32px;
+  // margin-right: 20px;
+  background-color: $grey;
+}
+@media screen and (max-width:500px){
+    .hidden-btn {
+        display: none !important;
+    }
+}
+// @media screen and (min-width:768px){
+//   .nav__break {
+//       display: block !important;
+//   }
+// }
